@@ -11,7 +11,7 @@ app.use(
   cors({
     credentials: true,
     methods:["POST","GET]
-    origin: "https://code-verification-frontend.vercel.app",
+    origin: ["https://code-verification-frontend.vercel.app"],
   })
 );
 app.use(bodyParser.json());
