@@ -10,8 +10,8 @@ const PORT = process.env.PORT_NO || 3000;
 app.use(
   cors({
     credentials: true,
-    origin: ["https://verification-rlxl.vercel.app"],
-    methods: ["POST", "GET"],
+    //origin: ["https://verification-rlxl.vercel.app"],
+    //methods: ["POST", "GET"],
   })
 );
 app.use(bodyParser.json());
