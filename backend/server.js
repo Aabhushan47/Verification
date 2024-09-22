@@ -10,7 +10,7 @@ const PORT = process.env.PORT_NO || 3000;
 app.use(
   cors({
     credentials: true,
-    origin: ["https://verification-8rak.vercel.app"],
+    origin: "https://verification-8rak.vercel.app",
   })
 );
 app.use(bodyParser.json());
