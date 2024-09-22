@@ -10,6 +10,7 @@ const PORT = process.env.PORT_NO || 3000;
 app.use(
   cors({
     credentials: true,
+    methods:["POST","GET]
     origin: "https://code-verification-frontend.vercel.app",
   })
 );
