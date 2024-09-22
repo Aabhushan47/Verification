@@ -11,7 +11,7 @@ app.use(
   cors({
     credentials: true,
     origin: ["https://verification-rlxl.vercel.app"],
-    methods: ["POST", "GET", "OPTIONS"],
+    methods: ["POST", "GET"],
   })
 );
 app.use(bodyParser.json());
