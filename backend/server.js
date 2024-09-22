@@ -24,16 +24,6 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-app.options("/api/verify", (req, res) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://verification-rlxl.vercel.app"
-  );
-  res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.status(204).end();
-});
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
