@@ -11,7 +11,7 @@ app.use(
   cors({
     credentials: true,
     origin: ["https://verification-rlxl.vercel.app"],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "OPTIONS"],
   })
 );
 app.use(bodyParser.json());
@@ -20,6 +20,16 @@ app.use("/api", verifyRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello World");
+});
+
+app.options("/api/verify", (req, res) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://verification-rlxl.vercel.app"
+  );
+  res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.status(204).end();
 });
 
 app.listen(PORT, () => {
