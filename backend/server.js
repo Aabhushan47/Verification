@@ -10,14 +10,13 @@ const PORT = process.env.PORT_NO || 3000;
 app.use(
   cors({
     credentials: true,
-    methods:["POST","GET]
-    origin: ["https://code-verification-frontend.vercel.app"],
+    origin: ["http://localhost:5173"],
+    methods: ["POST", "GET"],
   })
 );
 app.use(bodyParser.json());
 
 app.use("/api", verifyRoute);
-
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
