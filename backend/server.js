@@ -12,6 +12,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://verification-frontend-psi.vercel.app",
+      "http://verification-frontend-psi.vercel.app",
     ],
   })
 );
