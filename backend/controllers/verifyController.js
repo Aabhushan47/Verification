@@ -1,5 +1,6 @@
 exports.verifyCode = async (req, res) => {
   try {
+    console.log(req?.hostname, req?.protocol);
     const { code } = req.body;
     if (!code) {
       return res.status(400).json({
