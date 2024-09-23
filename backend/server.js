@@ -7,12 +7,14 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT_NO || 3000;
 
-app.use(
-  cors({
-    credentials: true,
-    origin: "https://verification-8rak.vercel.app",
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: "https://verification-8rak.vercel.app",
+//   })
+// );
+
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/api", verifyRoute);
