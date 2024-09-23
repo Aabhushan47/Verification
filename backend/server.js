@@ -7,19 +7,9 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT_NO || 3000;
 
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: ["*"],
-//   })
-// );
-
 app.use(
   cors({
-    origin: "http://localhost:5173", // your frontend's URL
-    credentials: true, // allow credentials
-    methods: ["GET", "POST"], // allowed methods
-    allowedHeaders: ["Content-Type", "Authorization"], // allowed headers
+    origin: "https://verification-8rak.vercel.app",
   })
 );
 

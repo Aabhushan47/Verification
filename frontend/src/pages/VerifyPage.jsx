@@ -86,7 +86,6 @@ const VerifyPage = () => {
         `${API}/verify`,
         { code },
         {
-          withCredentials: true,
           headers: {
             "Content-Type": "application/json",
           },
