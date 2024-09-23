@@ -9,7 +9,7 @@ const PORT = process.env.PORT_NO || 3000;
 
 app.use(
   cors({
-    origin: "https://verification-8rak.vercel.app",
+    origin: "http://localhost:5173",
   })
 );
 
